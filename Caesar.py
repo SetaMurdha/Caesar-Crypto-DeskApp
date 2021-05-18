@@ -7,7 +7,7 @@ class Caesar:
 		abjad = "abcdefghijklmnopqrstuvwxyz 0123456789"
 		chiperText = ""
 		for words in self.plainText:
-			wordsIndex = abjad.find(words)+self.key
+			wordsIndex = (abjad.find(words)+self.key)%len(abjad)
 			chiperText= chiperText+abjad[wordsIndex]
 
 		return chiperText
@@ -16,7 +16,7 @@ class Caesar:
 		abjad = "abcdefghijklmnopqrstuvwxyz 0123456789"
 		chiperText = ""
 		for words in self.plainText:
-			wordsIndex = abjad.find(words)-self.key
+			wordsIndex = (abjad.find(words)-self.key)%len(abjad)
 			chiperText= chiperText+abjad[wordsIndex]
 		return chiperText
 
