@@ -1,5 +1,4 @@
 class Caesar:
-	"""docstring for Encrypt"""
 	def __init__(self,plainText,key):
 		self.plainText = str.lower(plainText)
 		self.key = key
@@ -9,7 +8,6 @@ class Caesar:
 		for words in self.plainText:
 			wordsIndex = (abjad.find(words)+self.key)%len(abjad)
 			chiperText= chiperText+abjad[wordsIndex]
-
 		return chiperText
 
 	def decrypt(self):
@@ -19,5 +17,3 @@ class Caesar:
 			wordsIndex = (abjad.find(words)-self.key)%len(abjad)
 			chiperText= chiperText+abjad[wordsIndex]
 		return chiperText
-
-		
