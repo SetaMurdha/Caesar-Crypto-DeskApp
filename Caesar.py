@@ -1,4 +1,5 @@
 class Caesar:
+	
 	def __init__(self,plainText,key):
 		self.plainText = str.lower(plainText)
 		self.key = key
